@@ -13,6 +13,9 @@ public class SpringBootStarterDemoApplication {
         ApplicationContext context=SpringApplication.run(SpringBootStarterDemoApplication.class, args);
         OrderService order=context.getBean(OrderService.class);
         order.placeOrder();
+        PaymentGateway paymentGateway=context.getBean(PaymentGateway.class);
+        paymentGateway.print();
+
     }
 
 }
